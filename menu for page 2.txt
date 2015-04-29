@@ -1,0 +1,119 @@
+This part works but was ripped:
+
+css:
+
+nav a { 
+    text-decoration: none;
+    display: block; }
+nav a:hover { text-decoration: underline; }
+nav ul { 
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+nav ul li { margin: 0; padding: 0; }
+
+/* Top-level menu */
+nav > ul > li { 
+    float: left;
+    position: relative; }
+nav > ul > li > a { 
+    padding: 10px 30px;
+    border-left: 1px solid #000;
+    display: block;}
+
+
+/* Dropdown Menu */
+nav ul li ul { 
+    position: absolute;
+    background: #ccc;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    display: none; }
+nav ul li ul li { 
+    text-align: center;
+    width: 100%; }
+
+nav ul li:hover ul { display: block; }
+
+<body>
+<nav>
+    <ul>
+        <li><a href="#">Link</a></li>
+        <li>
+            <a href="#">Link</a>
+            <ul>
+                <li><a href="#">Submenu</a></li>
+                <li><a href="#">Submenu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Link</a></li>
+    </ul>
+</nav>
+</body>
+
+
+/* menu for page 2 */
+
+css:
+.menu a {
+    text-decoration:none;
+    display:block
+}
+.menu a:hover {
+    text-decoration:underline
+}
+.menu ul li {
+    margin:0;
+    padding:0
+}
+/*top-level menu */
+
+/*use "inline-block" to display horizontally and so that you can position dropdowns. can use just "block" if you want it to display vertically */
+ .topmenu li {
+    display:inline-block;
+    Text-align:center;
+    display:relative;
+    padding:15px;
+    margin:15px;
+}
+/* Dropdown Menu */
+ .submenu ul li ul {
+    position:relative;
+    display:none
+}
+.submenu ul li ul li {
+    text-align:center;
+    width:100%
+}
+.topmenu ul li:hover ul {
+    display:block
+}
+
+
+
+
+<body>
+<ul class="menu">
+    <li class="topMenu"><a href="#" class="subMenu">Example1</a>
+
+        <ul>
+            <li><a href="#">sub1</a>
+            </li>
+            <li><a href="#">sub2</a>
+            </li>
+            <li><a href="#">sub3</a>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#">Example2</a>
+    </li>
+    <li><a href="#">Example3</a>
+    </li>
+    <li><a href="#">Example4</a>
+    </li>
+    <li><a href="#">Example5</a>
+    </li>
+    <li><a href="#">Example6</a>
+    </li>
+</ul>
