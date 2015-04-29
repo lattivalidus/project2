@@ -5,12 +5,32 @@
 <link rel="stylesheet" type="text/css" href="woodstyle.css">
 <style>
 
-.browse			{text-align:center;}
-.browse li 		{display:inline-block;padding:15px;margin:15px;border-radius:15px;box-shadow: 10px 10px 5px #00003D;}
-.browse li:link		{color:white;background-color:black;text-decoration:none}
-.browse li:visited	{text-color:purple;text-decoration:none}
-.browse li:hover	{color:white;background-color:green}
-.browse li:active	{color:red}
+.browse {
+    text-align:center;
+}
+.browse li {
+    display:inline-block;
+    padding:15px;
+    margin:15px;
+    border-radius:15px;
+    box-shadow: 10px 10px 5px #00003D;
+    background-color:black;
+}
+.browse li a:link {
+    color:white;
+    text-decoration:none
+}
+.browse li:visited {
+    text-color:purple;
+    text-decoration:none
+}
+.browse li:hover {
+    color:white;
+    background:green
+}
+.browse li:active {
+    color:red
+}
 
 
 
@@ -25,14 +45,21 @@
 
 
 <div class="browse">
-<ul>
-	<li><a href="page1.html" target="_self"><b>home</b></a></li>
-	<li>about</li>
-	<li>clients</li>
-	<li>more info</li>
-	<li>services</li>
-	<li>contact</li>
-</ul>
+    <ul>
+        <li><a href="page1.html" target="_self"><b>home</b></a>
+
+        </li>
+        <li><a href="#">about</a>
+        </li>
+        <li><a href="#">clients</a>
+        </li>
+        <li><a href="#">more info</a>
+        </li>
+        <li><a href="#">services</a>
+        </li>
+        <li><a href="#">contact</a>
+        </li>
+    </ul>
 </div>
 
 
