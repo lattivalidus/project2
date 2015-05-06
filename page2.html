@@ -6,10 +6,20 @@
 <style>
 
 
-.pages	{width:100%;height:100%;background-color:white;}
+#pages {
+    background-color:white;
+    width:100%;
+    height:100%;
+    text-align:center;
+}
 
 .browse {
     text-align:center;
+    color:white;    
+}
+.browse a:link{
+    color:purple;
+    text-decoration:none
 }
 .browse li {
     display:inline-block;
@@ -18,24 +28,24 @@
     border-radius:15px;
     box-shadow: 10px 10px 5px #00003D;
     background-color:black;
+    cursor:url(pictures/glowpointer.png),default;
 }
-.browse li a:link {
-    color:white;
-    text-decoration:none
-}
-.browse li:visited {
-    text-color:purple;
-    text-decoration:none
-}
+
 .browse li:hover {
-    color:white;
-    background:green
+    background-color:green;
+
 }
 .browse li:active {
     color:red
 }
 
+#home:hover {
+    background-color:red;
+    text-decoration:underline;
+    
+} 
 
+/*since the id is placed in the li tag you only need to point to the id without having to add ul or li tag before the ':hover' Also, because ID takes priority over class, the ID will override the class style */
 
 
 </style>
@@ -43,29 +53,48 @@
 
 
 <body>
-<h1>Page 2!! </h1>
+<h1>Page 2 Banner!! </h1>
 <p> this is some text</p>
 
-<div class="pages">
+
+<!-- TOP MENU NAVIGATION -->
+
+
 <div class="browse">
     <ul>
-        <li><a href="page1.html" target="_self"><b>home</b></a>
-
+        <li id="home"><a href="page1.html"><b>Home</b></a>
         </li>
-        <li><a href="#">about</a>
+        <li onclick="aboutFunction()">about
         </li>
-        <li><a href="#">clients</a>
+        <li onclick="clientsFunction()">clients
         </li>
-        <li><a href="#">more info</a>
+        <li onclick="moreinfoFunction()">more info
         </li>
-        <li><a href="#">services</a>
+        <li onclick="servicesFunction()">services
         </li>
-        <li><a href="#">contact</a>
+        <li onclick="contactFunction()">contact
         </li>
     </ul>
 </div>
+
+<!--WHITE SPACE FOR INFORMATION -->
+<div style="clear:both"></div>
+<div id="pages">
+<p> Welcome to Page 2!!!</p>
+<p>We have a menu with several different selections here above. <br>Choose which one you would like to view, or hit the "Home" button to go back to the previous page. </p>
 </div>
 
+<script>
+function aboutFunction(){document.getElementById("pages").innerHTML="This is the about section of Jeff's Page, here is where I would say a bunch of stuff about who he is and what he does.";}
+
+function clientsFunction(){document.getElementById("pages").innerHTML="Client Information, I have no Idea what we would put here... maybe some big names?";}
+
+function moreinfoFunction(){document.getElementById("pages").innerHTML="more information... like maybe Jeff has some sweet deals, maybe we put the calendar here... ";}
+
+function servicesFunction(){document.getElementById("pages").innerHTML="here would be where we mention the services he can provide that he may not have examples of. Like custom order information or whatever";}
+
+function contactFunction(){document.getElementById("pages").innerHTML="Contact information, maybe something a little more interesting or pictures or something";}
+</script>
 
 </body>
 </html>
