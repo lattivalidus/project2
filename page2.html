@@ -68,7 +68,7 @@ p {
 
 <div class="browse">
     <ul>
-        <li id="home"><a href="page1.html"><b>Home</b></a>
+        <li id="home"><a href="javascript:HomeAlert();">Home</a>
         </li>
         <li onclick="aboutFunction()">about
         </li>
@@ -91,7 +91,7 @@ p {
 </div>
 
 <script>
-function aboutFunction(){document.getElementById("pages").innerHTML="This is the about section of Jeff's Page, here is where I would say a bunch of stuff about who he is and what he does.";}
+function aboutFunction(){document.getElementById("pages").innerHTML="<p><br><br>This is the about section of Jeff's Page, here is where I would say a bunch of stuff about who he is and what he does.</p>";}
 
 function clientsFunction(){document.getElementById("pages").innerHTML="Client Information, I have no Idea what we would put here... maybe some big names?";}
 
@@ -100,6 +100,10 @@ function moreinfoFunction(){document.getElementById("pages").innerHTML="more inf
 function servicesFunction(){document.getElementById("pages").innerHTML="here would be where we mention the services he can provide that he may not have examples of. Like custom order information or whatever";}
 
 function contactFunction(){document.getElementById("pages").innerHTML="Contact information, maybe something a little more interesting or pictures or something";}
+
+function HomeAlert(){
+var answer=confirm("Are you sure you want to go back to the home page?")
+if (answer) window.location="page1.html";}
 </script>
 
 </body>
